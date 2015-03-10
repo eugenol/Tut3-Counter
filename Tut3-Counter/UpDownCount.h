@@ -1,5 +1,6 @@
 #ifndef COUNTER_H
 #define COUNTER_H
+#include <iostream>
 
 class UpDownCount
 {
@@ -13,5 +14,7 @@ public:
 	UpDownCount operator++(int);
 	UpDownCount operator--();
 	UpDownCount operator--(int);
+
+	friend std::ostream &operator<<(std::ostream &, const UpDownCount &);
 };
 #endif

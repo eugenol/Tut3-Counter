@@ -1,9 +1,9 @@
 #include "UpDownCount.h"
 
 
-UpDownCount::UpDownCount(int low = 0, int high = 255, int inc = 1, int dec = 1)
+UpDownCount::UpDownCount(int low, int high, int inc, int dec)
 {
-	lowVal = low;
+	count = lowVal = low;
 	highVal = high;
 	incVal = inc;
 	decVal = dec;
@@ -64,4 +64,10 @@ UpDownCount UpDownCount::operator--(int)
 	}
 
 	return Temp;
+}
+
+std::ostream &operator<<(std::ostream &os, const UpDownCount &rhs)
+{
+	std::cout << rhs.count;
+	return os;
 }
