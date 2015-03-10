@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Counter.h"
+#include "UpDownCount.h"
 
 int main(int argc, char* argv[])
 {
