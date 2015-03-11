@@ -3,7 +3,8 @@
 
 UpDownCount::UpDownCount(int low, int high, int inc, int dec)
 {
-	count = lowVal = low;
+	count = low;
+	lowVal = low;
 	highVal = high;
 	incVal = inc;
 	decVal = dec;
@@ -22,6 +23,8 @@ UpDownCount UpDownCount::operator++()
 	{
 		count += incVal;
 	}
+	else
+		std::cout << "Can not increment the counter" << std::endl;
 
 	Temp.count = count;
 	
@@ -36,6 +39,8 @@ UpDownCount UpDownCount::operator++(int)
 	{
 		count += incVal;
 	}
+	else
+		std::cout << "Can not increment the counter" << std::endl;
 
 	return Temp;
 }
@@ -48,6 +53,8 @@ UpDownCount UpDownCount::operator--()
 	{
 		count -= decVal;
 	}
+	else
+		std::cout << "Can not decrement the counter" << std::endl;
 
 	Temp.count = count;
 
@@ -62,6 +69,8 @@ UpDownCount UpDownCount::operator--(int)
 	{
 		count -= decVal;
 	}
+	else
+		std::cout << "Can not decrement the counter" << std::endl;
 
 	return Temp;
 }
