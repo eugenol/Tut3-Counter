@@ -1,24 +1,48 @@
 #include <iostream>
 #include "UpDownCount.h"
 
+using namespace std;
+
 int main(int argc, char* argv[])
 {
-	UpDownCount a, b(120, 250, 5, 2), c(0, 1);
+	//Test cases
+	UpDownCount a, b(120, 250, 5, 2), c(0, 1), d(-120, 120, 2, 2);
 
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
+	cout << a << endl;
+	cout << ++a << endl;
+	cout << a++ << endl;
+	cout << a << endl;
+	cout << --a << endl;
+	cout << a-- << endl;
+	cout << a << endl;
+	cout << endl;
+	
+	cout << b << endl;
+	cout << ++b << endl;
+	cout << b++ << endl;
+	cout << b << endl;
+	cout << --b << endl;
+	cout << b-- << endl;
+	cout << b << endl;
+	cout << endl;
 
-	std::cout << b << std::endl;
-	std::cout << ++b << std::endl;
-	std::cout << b++ << std::endl;
-	std::cout << b << std::endl;
+	cout << c << endl;
+	cout << ++c << endl;
+	cout << c++ << endl;
+	cout << c << endl;
+	cout << --c << endl;
+	cout << c-- << endl;
+	cout << c << endl;
+	cout << endl;
 
-	std::cout << c << std::endl;
-	std::cout << ++c << std::endl;
-	std::cout << c++ << std::endl;
-	std::cout << c << std::endl;
+	cout << d << endl;
+	cout << ++d << endl;
+	cout << d++ << endl;
+	cout << d << endl;
+	cout << --d << endl;
+	cout << d-- << endl;
+	cout << d << endl;
+	cout << endl;
 
 	return 0;
 }

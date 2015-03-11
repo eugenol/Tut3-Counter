@@ -3,7 +3,7 @@
 
 UpDownCount::UpDownCount(int low, int high, int inc, int dec)
 {
-	count = low;
+	count = low; //Counter starts counting from the lowest count
 	lowVal = low;
 	highVal = high;
 	incVal = inc;
@@ -19,7 +19,7 @@ UpDownCount UpDownCount::operator++()
 {
 	UpDownCount Temp(lowVal, highVal, incVal, decVal);
 
-	if (count + incVal <= highVal)
+	if (count + incVal <= highVal) // Cheeck if incrementation will exceed the maximum value
 	{
 		count += incVal;
 	}
@@ -35,10 +35,8 @@ UpDownCount UpDownCount::operator++(int)
 	UpDownCount Temp(lowVal, highVal, incVal, decVal);
 	Temp.count = count;
 
-	if (count + incVal <= highVal)
-	{
+	if (count + incVal <= highVal) // Cheeck if incrementation will exceed the maximum value
 		count += incVal;
-	}
 	else
 		std::cout << "Can not increment the counter" << std::endl;
 
@@ -49,10 +47,8 @@ UpDownCount UpDownCount::operator--()
 	UpDownCount Temp(lowVal, highVal, incVal, decVal);
 
 
-	if (count - decVal >= lowVal)
-	{
+	if (count - decVal >= lowVal) // Cheeck if decrementation will be lower than  the minimum value
 		count -= decVal;
-	}
 	else
 		std::cout << "Can not decrement the counter" << std::endl;
 
@@ -65,10 +61,8 @@ UpDownCount UpDownCount::operator--(int)
 	UpDownCount Temp(lowVal, highVal, incVal, decVal);
 	Temp.count = count;
 
-	if (count - decVal >= lowVal)
-	{
+	if (count - decVal >= lowVal) // Cheeck if decrementation will be lower than  the minimum value
 		count -= decVal;
-	}
 	else
 		std::cout << "Can not decrement the counter" << std::endl;
 
