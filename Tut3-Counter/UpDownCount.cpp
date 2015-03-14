@@ -3,6 +3,7 @@
 
 UpDownCount::UpDownCount(int low, int high, int inc, int dec)
 {
+	//Initialize the counter.
 	count = lowVal = low;
 	highVal = high;
 	incVal = inc;
@@ -18,6 +19,7 @@ UpDownCount UpDownCount::operator++()
 {
 	UpDownCount Temp(lowVal, highVal, incVal, decVal);
 
+	// If the counter will not exceed the maximum count, increment the counter.
 	if (count + incVal <= highVal)
 	{
 		count += incVal;
@@ -32,6 +34,7 @@ UpDownCount UpDownCount::operator++(int)
 	UpDownCount Temp(lowVal, highVal, incVal, decVal);
 	Temp.count = count;
 
+	// If the counter will not exceed the maximum count, increment the counter.
 	if (count + incVal <= highVal)
 	{
 		count += incVal;
@@ -43,7 +46,7 @@ UpDownCount UpDownCount::operator--()
 {
 	UpDownCount Temp(lowVal, highVal, incVal, decVal);
 
-
+	// If the counter will be lower than the minimum count, decrement the counter.
 	if (count - decVal >= lowVal)
 	{
 		count -= decVal;
@@ -58,6 +61,7 @@ UpDownCount UpDownCount::operator--(int)
 	UpDownCount Temp(lowVal, highVal, incVal, decVal);
 	Temp.count = count;
 
+	// If the counter will be lower than the minimum count, decrement the counter.
 	if (count - decVal >= lowVal)
 	{
 		count -= decVal;
